@@ -1,5 +1,9 @@
 export const sortingOptions = [
   {
+    title: "Featured",
+    sortedBy: "featured",
+  },
+  {
     title: "Mens",
     sortedBy: "men's clothing",
   },

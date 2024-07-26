@@ -4,13 +4,13 @@ import SortingBox from "../../components/SortingBox/SortingBox";
 
 export default function Home() {
   // sorting state
-  const [sorted, setSorted] = useState("Featured");
+  const [sorted, setSorted] = useState("featured");
 
-  console.log(sorted);
+  
 
   return (
     <>
-      <div>
+      <div className="px-5">
         <SortingBox sorted={sorted} setSorted={setSorted} />
         <ProductsContainer sorted={sorted} />
       </div>

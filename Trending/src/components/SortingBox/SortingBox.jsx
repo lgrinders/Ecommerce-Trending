@@ -8,32 +8,34 @@ const SortingBox = ({ sorted, setSorted }) => {
 
   return (
     <>
-      <div
-        className="relative flex h-12 w-52 cursor-pointer border border-neutral-200 text-xs font-semibold duration-200 hover:shadow-2xl"
-        onClick={() => setSortedOpen(!sortedOpen)}
-      >
-        <div className="flex w-full items-center justify-between px-5">
-          <div className="flex items-center gap-1">
-            <LuArrowDownUp />
-            Sort: {sorted}
-          </div>
-          <div>{sortedOpen ? <LuChevronDown /> : <LuChevronUp />}</div>
-        </div>
-
+      <div className="container mx-auto my-5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <div
-          className={`${sortedOpen ? "block shadow-2xl" : "hidden"} absolute top-12 w-full border border-neutral-200 bg-white`}
+          className="relative flex h-12 cursor-pointer border border-neutral-200 text-xs font-semibold duration-200 hover:shadow-xl"
+          onClick={() => setSortedOpen(!sortedOpen)}
         >
-          {sortingOptions.map((item, idx) => {
-            return (
-              <div
-                className="border-b border-neutral-200 px-5 py-2.5 text-xs duration-200 hover:font-bold"
-                onClick={() => setSorted(item.title)}
-                key={idx}
-              >
-                {item.title}
-              </div>
-            );
-          })}
+          <div className="flex w-full items-center justify-between px-5">
+            <div className="flex items-center gap-1">
+              <LuArrowDownUp />
+              Sort: {sorted}
+            </div>
+            <div>{sortedOpen ? <LuChevronDown /> : <LuChevronUp />}</div>
+          </div>
+
+          <div
+            className={`${sortedOpen ? "block shadow-2xl" : "hidden"} absolute top-12 w-full border border-neutral-200 bg-white`}
+          >
+            {sortingOptions.map((item, idx) => {
+              return (
+                <div
+                  className="border-b border-neutral-200 px-5 py-2.5 text-xs duration-200 hover:font-bold"
+                  onClick={() => setSorted(item.sortedBy)}
+                  key={idx}
+                >
+                  {item.title}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>
