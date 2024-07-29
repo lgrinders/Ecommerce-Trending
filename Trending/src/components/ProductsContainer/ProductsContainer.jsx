@@ -1,11 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 // import product context
 import { ProductContext } from "../../context/ProductProvider";
 // import Product
 import Product from "../Product/Product";
 
+// uses sorted state from Home component
 const ProductsContainer = ({ sorted }) => {
-  // improt products context
+  // import products context
   const { products } = useContext(ProductContext);
 
   // filters products based on sorted state
@@ -24,7 +25,9 @@ const ProductsContainer = ({ sorted }) => {
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        {/* map out filteredProducts */}
         {filteredProducts.map((product) => {
+          // return each filteredProduct using Product component
           return <Product product={product} key={product.id} />;
         })}
       </div>
