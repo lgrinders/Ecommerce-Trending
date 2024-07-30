@@ -8,7 +8,7 @@ import { FiTrash2 } from "react-icons/fi";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, setCart, itemAmount, total } = useContext(CartContext);
+  const { cart, itemAmount, total, clearCart } = useContext(CartContext);
 
   return (
     <div
