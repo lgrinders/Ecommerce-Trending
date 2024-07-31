@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import { ProductDetails } from "./pages/ProductDetails";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
       <Sidebar />
+      <Footer />
     </>
   );
 }

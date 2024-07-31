@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { SidebarContext } from "../../context/SidebarContext";
@@ -10,9 +10,29 @@ const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, itemAmount, total, clearCart } = useContext(CartContext);
 
+  const sidebarRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        !sidebarRef.current.contains(event.target) &&
+        !event.target.closest(".sidebar")
+      ) {
+        handleClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [handleClose]);
+
   return (
     <div
-      className={`${isOpen ? "right-0" : "-right-full"} fixed top-0 z-20 h-full w-full bg-white px-4 shadow-lg transition-all duration-300 md:w-[35vw] lg:px-[35px] xl:max-w-[30vw]`}
+      className={`${isOpen ? "right-0" : "-right-full"} sidebar fixed top-0 z-50 h-full w-full bg-white px-4 shadow-lg transition-all duration-300 md:w-[35vw] lg:px-[35px] xl:max-w-[30vw]`}
+      ref={sidebarRef}
     >
       <div className="flex items-center justify-between border-b py-6">
         <div className="text-sm font-semibold uppercase">
@@ -44,11 +64,11 @@ const Sidebar = () => {
         </div>
         <Link
           to={"/"}
-          className="flex w-full items-center justify-center bg-neutral-200 hover:bg-neutral-400 p-2 font-bold duration-300 hover:shadow-md"
+          className="flex w-full items-center justify-center bg-neutral-200 p-2 font-bold duration-300 hover:bg-neutral-400 hover:shadow-md"
         >
           View Cart
         </Link>
-        <Link className="flex w-full items-center justify-center bg-orange-600 hover:bg-orange-700 p-2 font-bold text-white duration-300 hover:shadow-md">
+        <Link className="flex w-full items-center justify-center bg-orange-600 p-2 font-bold text-white duration-300 hover:bg-orange-700 hover:shadow-md">
           Checkout
         </Link>
       </div>

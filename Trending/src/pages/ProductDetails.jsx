@@ -7,6 +7,8 @@ export const ProductDetails = () => {
   const { id } = useParams();
   const { products } = useContext(ProductContext);
   const { addToCart } = useContext(CartContext);
+  
+
 
   const product = products.find((item) => {
     return item.id === parseInt(id);
