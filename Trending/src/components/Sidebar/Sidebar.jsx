@@ -65,13 +65,13 @@ const Sidebar = () => {
         <Link
           to={`${cart.length === 0 ? "/" : "/viewcart"}`}
           onClick={() => handleClose()}
-          className="tracking-widestF flex w-full items-center justify-center bg-neutral-200 p-2 font-bold hover:bg-neutral-100"
+          className={`${cart.length === 0 ? "bg-red-600 text-white hover:bg-red-600" : "bg-neutral-200 text-black"} tracking-widestF flex w-full items-center justify-center p-2 font-bold hover:bg-neutral-100`}
         >
           VIEW CART
         </Link>
         <div
           onClick={`${cart.length === 0 ? () => {} : () => handleClose()}`}
-          className={` ${cart.length === 0 ? "bg-red-600 hover:bg-red-600" : "bg-orange-600"} cursor-pointer flex w-full items-center justify-center bg-orange-600 p-2 font-bold tracking-widest text-white hover:bg-orange-300`}
+          className={` ${cart.length === 0 ? "bg-red-600 hover:bg-red-600" : "bg-orange-600"} flex w-full cursor-pointer items-center justify-center bg-orange-600 p-2 font-bold tracking-widest text-white hover:bg-orange-300`}
         >
           CHECKOUT
         </div>
