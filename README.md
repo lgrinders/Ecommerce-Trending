@@ -1,2 +1,2 @@
 # Trending
- Ecommerce website
+ Ecommerce website that uses an api for products
