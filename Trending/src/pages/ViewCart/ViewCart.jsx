@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import CartItem from "../../components/CartItem/CartItem";
 
 const ViewCart = () => {
-  const { cart, itemAmount, total, clearCart } = useContext(CartContext);
+  const { cart, itemAmount, total } = useContext(CartContext);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -45,7 +45,7 @@ const ViewCart = () => {
               </div>
               <div className="flex justify-between border-b border-t py-5">
                 <div className="text-lg font-bold">Estimated Order Total</div>
-                <div>{total}</div>
+                <div>{(total).toFixed(2)}</div>
               </div>
             </div>
             <div>
