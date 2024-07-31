@@ -28,7 +28,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex h-full items-center justify-between">
         <Link to="/">
-          <div className="flex items-center gap-1">
+          <div>
             <img className="w-[40px]" src={logo} alt={"Trending-logo"} />
           </div>
         </Link>

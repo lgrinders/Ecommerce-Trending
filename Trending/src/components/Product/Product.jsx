@@ -11,7 +11,7 @@ const Product = ({ product }) => {
 
   return (
     <>
-      <div className="flex cursor-pointer flex-col items-center justify-between border border-neutral-200 p-5 duration-300 hover:shadow-lg">
+      <div className="flex cursor-pointer flex-col items-center justify-between border border-neutral-200 p-5 duration-300 hover:shadow-lg bg-white">
         {/* each products image links to its respective page */}
         <Link to={`/product/${id}`}>
           <img

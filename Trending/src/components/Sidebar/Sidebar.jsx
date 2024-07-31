@@ -57,19 +57,20 @@ const Sidebar = () => {
           </div>
           <div
             onClick={() => clearCart()}
-            className="flex h-12 w-12 cursor-pointer items-center justify-center bg-red-500 py-4 text-xl text-white duration-300 hover:bg-red-600 hover:shadow-md"
+            className="flex h-12 w-12 cursor-pointer items-center justify-center bg-red-500 py-4 text-xl text-white hover:bg-red-700"
           >
             <FiTrash2 />
           </div>
         </div>
         <Link
-          to={"/"}
-          className="flex w-full items-center justify-center bg-neutral-200 p-2 font-bold duration-300 hover:bg-neutral-400 hover:shadow-md"
+          to={"/viewcart"}
+          onClick={() => handleClose()}
+          className="flex w-full items-center justify-center bg-neutral-200 p-2 font-bold tracking-widestF hover:bg-neutral-100"
         >
-          View Cart
+          VIEW CART
         </Link>
-        <Link className="flex w-full items-center justify-center bg-orange-600 p-2 font-bold text-white duration-300 hover:bg-orange-700 hover:shadow-md">
-          Checkout
+        <Link className="flex w-full items-center justify-center bg-orange-600 p-2 font-bold tracking-widest text-white hover:bg-orange-300">
+          CHECKOUT
         </Link>
       </div>
     </div>

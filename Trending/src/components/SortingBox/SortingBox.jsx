@@ -8,11 +8,9 @@ const SortingBox = ({ sorted, setSorted }) => {
 
   return (
     <>
-      <div className="container relative z-10 mx-auto mb-5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-      id="sortingbox"
-      >
+      <div className="container relative z-10 mx-auto mb-5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <div
-          className="relative flex h-12 cursor-pointer border border-neutral-200 text-xs font-semibold duration-200 hover:shadow-lg"
+          className="relative flex h-12 cursor-pointer border border-neutral-200 bg-white text-xs font-semibold duration-200 hover:shadow-lg"
           onClick={() => setSortedOpen(!sortedOpen)}
         >
           <div className="flex w-full items-center justify-between px-5">

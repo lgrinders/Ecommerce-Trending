@@ -13,7 +13,9 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <div className="p-5">
+      <div className="p-5 bg-neutral-200"
+      id="main-content"
+      >
         <SortingBox sorted={sorted} setSorted={setSorted} />
         <ProductsContainer sorted={sorted} />
       </div>
