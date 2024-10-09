@@ -11,6 +11,6 @@
 
 
 
-![Overview of Sunday Salad](https://github.com/lgrinders/Ecommerce-Trending/blob/main/Trending%20image.jpg?raw=true))
+![Overview of Trending](https://github.com/lgrinders/Ecommerce-Trending/blob/main/Trending%20image.jpg?raw=true))
 
 
