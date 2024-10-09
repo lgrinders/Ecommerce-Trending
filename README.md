@@ -1,14 +1,16 @@
-<h1>Sunday Salad</h1> 
-<p>Sunday Salad is a clean and user-friendly recipe search website.</p> 
+<h1>Trending</h1> 
+<p>Trending is a sleek and easy-to-use eCommerce store.</p> 
 <h2>Features</h2> 
 <ul> 
-  <li>Search for ingredients and discover recipes that include them.</li> 
-  <li>Results are filtered to display only high-quality images.</li> 
-  <li>Save your favorite recipes for easy access later.</li> 
-  <li>Your favorites are saved even after refreshing the page.</li> 
-  <li>Responsive, intuitive, and simple UI.</li> 
+  <li>Browse clothing for both men and women.</li> 
+  <li>Sort items by featured products, price, or gender.</li> 
+  <li>Add items to your cart and view your total instantly.</li> 
+  <li>Your cart is persistent, even after a page refresh.</li> <li>Clean, stylish, and user-friendly UI.
+  </li> 
 </ul>
 
 
 
-![Overview of Sunday Salad](https://github.com/lgrinders/RecipieApp/blob/main/Sunday%20Salad%20image.jpg?raw=true)
+![Overview of Sunday Salad](https://github.com/lgrinders/Ecommerce-Trending/blob/main/Trending%20image.jpg?raw=true))
+
+
